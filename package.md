@@ -39,8 +39,15 @@
 - 이름은 require()의 인자로 사용되므로, 짧게 작성하되 직관적이어야 한다.
 - 만약 해당 모듈의 이름이 등록되었는지 확인하려면 [https://www.npmjs.com/](https://www.npmjs.com/) 에서 확인 할 수 있다.
 
+## description
+프로젝트에 대한 설명을 문자열로 입력한다. 여기에 작성한 대로 `npm search` 명령어를 사용했을 때, 사람들로 하여금 해당 모듈을 찾을 수 있게 도와준다.
+
 
 ## Version
+만약 해당 모듈을 npm에 올릴 계획이 있다면 위에서 이야기했듯, name과 version은 필수 값이다. name과 version은 함께 해당 모듈이 unique 하다는 것을 나타낼 수 있다. 해당 package가 변경되면, version 역시 함께 변경되어야 한다. 만약에 해당 패키지를 npm에 올릴 생각이 없다면 해당 필드 역시 선택이다.
+
+### Version 표기법
+package.json에 표기되는 version은 다음과 같다.
 
 | 표기                | 설명
 | :---               | :---
@@ -57,3 +64,30 @@
 | version1 - version2| &gt;= version1 &lt;= version2 과 같음.
 | range1 \|\| range2 | range1 또는 range2
 
+## Author
+해당 값은 한명의 사람에 대해서 나타낸다. 대신 `contributors`값은 array 형태로 여러명을 기입할 수 있다. 그리고 그 하나의 Person에 대해서는 name을 입력할 수 있으며 선택값으로 email과 url을 입력할 수 있다. 
+
+```json
+{
+  "author": {
+    "name" : "Martin",
+    "email" : "martin@within.com",
+    "url" : "http://blog.martinwork.co.kr/"
+  }
+}
+```
+
+혹은 아래와 같이 기술하더라도 npm 자체에서 해석할수 있다.
+```json
+{
+  "author": "martin <martin@within.co.kr> (http://blog.martinwork.co.kr/)"
+}
+```
+
+## license
+해당 필드에는 해당 모듈에 대한 라이센스에 대한 정보를 기술하는 영역으로서, 만약 해당 모듈이 npm에 올라갔을 경우 해당 모듈을 사용할 수 있는 권한에 대한 내용을 기술하는 영역이다.
+
+---
+
+## 출처
+- [npm 공식 문서](https://docs.npmjs.com/files/package.json)
