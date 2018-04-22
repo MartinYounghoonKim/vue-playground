@@ -30,10 +30,10 @@
 | 표기                | 설명
 | :---               | :---
 | version            | version 과 일치.
-| &gt;version        |
-| &gt;=version       |
-| &lt;version        |
-| &lt;=version       |
+| &gt;version        | 명시한 version보다 높아야함 
+| &gt;=version       | 명시한 version보다 높거나 같아야함
+| &lt;version        | 명시한 version보다 낮아야함
+| &lt;=version       | 명시한 version보다 낮거나 같아야함
 | ~version           | version 과 근사한 버전.
 | ^version           | version 과 호환되는 것.
 | 1.2.x              | 1.2.0, 1.2.1, 등등. 1.3.0은 제외
