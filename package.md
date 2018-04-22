@@ -11,7 +11,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "vue": "^2.5.11"
+    // 운영 단계에서 필요한 의존성 모듈 
   },
   "browserslist": [
     "> 1%",
@@ -19,19 +19,26 @@
     "not ie <= 8"
   ],
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-3": "^6.24.1",
-    "cross-env": "^5.0.5",
-    "css-loader": "^0.28.7",
-    "file-loader": "^1.1.4",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
-    "vue-loader": "^13.0.5",
-    "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    // 개발 단계에서 필요한 의존성 모듈 
   }
 }
 ```
+
+
+## Version
+
+| 표기                | 설명
+| :---               | :---
+| version            | version 과 일치.
+| &gt;version        |
+| &gt;=version       |
+| &lt;version        |
+| &lt;=version       |
+| ~version           | version 과 근사한 버전.
+| ^version           | version 과 호환되는 것.
+| 1.2.x              | 1.2.0, 1.2.1, 등등. 1.3.0은 제외
+| *                  | 모든 버전
+| ""                 | * 와 같음
+| version1 - version2| &gt;= version1 &lt;= version2 과 같음.
+| range1 \|\| range2 | range1 또는 range2
+
