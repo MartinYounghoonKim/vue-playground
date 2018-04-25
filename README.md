@@ -4,6 +4,8 @@
 
 [Youtube 동영상보기](https://www.youtube.com/watch?v=BYbgopx44vo)
 
+### Vitual Dom이 나오게 된 배경
+
 - Dom이란 Document Object Model의 약자로서 구조화된 nodes와 property 그리고 method를 갖고 object로 문서를 표현 [Dom의 methods와 property](https://www.w3schools.com/jsref/dom_obj_all.asp)
 - 웹 페이지를 스크립트 또는 프로그래밍 언어들에서 사용될 수 있게 연결시켜주는 역할을 담당한다.
 
