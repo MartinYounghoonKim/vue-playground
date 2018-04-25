@@ -9,6 +9,7 @@
 
 ### Dom의 NodeType 
 - [원문 보러가기](https://developer.mozilla.org/ko/docs/Web/API/Node/nodeType)
+
 | Constant              | Value              | Description              
 | :---               | :---                     | :---
 | Node.ELEMENT_NODE           | 1            | An Element node such as <p> or <div>.
