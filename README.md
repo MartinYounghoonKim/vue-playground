@@ -39,3 +39,15 @@ console.log(children1.nextSibling.nextSibling.nodeType);
 ```
 
 - 이러한 Dom 노드 속에서 우리가 원하는 Node를 탐색하고 제어하는 것은 큰 비용이 든다.
+
+<img src='./dom-flow.png'>
+
+- HTML, CSS를 브라우저에 전달
+- 브라우저 엔진에서 각각을 파싱 
+- Dom tree와 CSS 규칙이 결합해 `Render tree` 를 형성
+> Render tree 란 페이지를 랜더링하는 데 필요한 노드만 포함하며, 예를 들어 display: none, <head> 에 있는 내용은 포함하지 않는다. 
+
+- Reflow라는 Dom element의 좌표 등과 같은 레이아웃 배치 작업이 일어남
+- Repainting 이라는 색을 입히는 과정이 일어나며 시각적인 작업이 일어남
+- 유저에게 제공
+ 
