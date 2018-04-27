@@ -1,21 +1,9 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <h1>Vue playground</h1>
+    {{ message }}
+    <button type="button" @click="updateTest">데이터 변경</button>
   </div>
 </template>
 
@@ -24,7 +12,32 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      message: '변경 전의 메세지'
+    }
+  },
+  beforeCreate() {
+    console.log('인스턴스 초기화 후, 데이터 관찰/이벤트/감시자 설정 전 호출됩니다.')
+  },
+  created() {
+    //$el 속성을 사용할 수 없습니다.
+    console.log('인스턴스가 작성된 후 동기적으로 호출됩니다.');
+  },
+  beforeMount() {
+    console.log('마운트되기 바로 직전 전 호출됩니다.')
+  },
+  mounted() {
+    //$el 속성을 사용할 수 있습니다.
+    console.log('마운트 된 직후 호출됩니다.')
+  },
+  beforeUpdate () {
+    console.log(`${this.message}가 변경됩니다.` );
+  },
+  updated () {
+    console.log(`${this.message}로 변경되었습니다.` );
+  },
+  methods: {
+    updateTest () {
+      this.message = '변경 후의 메세지'
     }
   }
 }
