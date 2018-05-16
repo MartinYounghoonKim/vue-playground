@@ -80,8 +80,9 @@ $ npm install -g deployd
 > * 모든 데이터
 > * 모든 데이터 중 특정 데이터
 
+
 | Task | Route | Accepts | Returns |
-| ---
+| :--- | :---  | :---    | :---
 | **Listing Data** | /todos | Nothing | An array of objects |
 | **Getting an object** | /todos/:id | Nothing | A single object |
 
@@ -93,7 +94,7 @@ $ npm install -g deployd
 - Get Method는 새로운 데이터를 추가하는 경우 사용할 수 있다.
 
 | Task | Route | Accepts | Returns |
-| ---
+| :--- | :---  | :---    | :---
 | **Creating an object** | /todos | A single object | The saved object (or errors) |
 
 - 해당 Method를 사용할 때는 새로 추가할 데이터를 Object 형태로 요청해야 한다.
@@ -104,7 +105,7 @@ $ npm install -g deployd
 - Put Method는 기존 데이터를 Update 할 경우에 사용할 수 있다.
 
 | Task | Route | Accepts | Returns |
-| ---
+| :--- | :---  | :---    | :---
 | **Updating an object** | /todos/:id | A single object | The saved object (or errors) |
 
 - 해당 Method를 사용할 때는 새로 추가할 데이터를 Object 형태로 요청해야 한다.
@@ -115,7 +116,7 @@ $ npm install -g deployd
 - Delete Method는 기존 데이터를 삭제할 때 사용한다.
 
 | Task | Route | Accepts | Returns |
-| ---
+| :--- | :---  | :---    | :---
 | **Deleting an object** | /todos/:id | A single object | Nothing |
 
 
