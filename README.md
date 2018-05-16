@@ -69,7 +69,7 @@ $ brew install mongodb
 
 # install deployd global
 $ npm install -g deployd
-``
+```
 
 ## Restful api methods
 
