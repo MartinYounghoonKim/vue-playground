@@ -57,3 +57,16 @@ console.log(children1.nextSibling.nextSibling.nodeType);
 
 - Dom의 추상화 개념으로 Real Dom의 복사본이라고 생각하면 쉬움
 - Dom에 변화가 일어나면 변화된 부분만 감지하여, 해당 부분만 변경해주는 개념 [간단한 예시](https://github.com/nhnent/fe.javascript/wiki/Reflow%EC%99%80-Repaint#%EC%B5%9C%EC%A0%81%ED%99%94-%EB%B0%A9%EB%B2%95)
+
+## Setting deployd
+
+```bash
+# Homebrew가 없을경우
+$ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+
+# install mongodb
+$ brew install mongodb
+
+# install deployd global
+$ npm install -g deployd
+```
