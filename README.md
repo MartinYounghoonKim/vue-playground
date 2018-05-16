@@ -69,4 +69,54 @@ $ brew install mongodb
 
 # install deployd global
 $ npm install -g deployd
-```
+``
+
+## Restful api methods
+
+### Get
+
+- Get Method 에는 2가지의 경우에 사용할 수 있다.
+
+> * 모든 데이터
+> * 모든 데이터 중 특정 데이터
+
+| Task | Route | Accepts | Returns |
+| ---
+| **Listing Data** | /todos | Nothing | An array of objects |
+| **Getting an object** | /todos/:id | Nothing | A single object |
+
+- 특정 데이터를 보는 경우는 Primary Key 를 뒤에 param으로 붙여준다.
+- Return 값으로는 모든 데이터를 호출한 경우는 Array 형태로, 특정 데이터만 호출한 경우에는 Object 형태로 받는다.
+
+### Post
+
+- Get Method는 새로운 데이터를 추가하는 경우 사용할 수 있다.
+
+| Task | Route | Accepts | Returns |
+| ---
+| **Creating an object** | /todos | A single object | The saved object (or errors) |
+
+- 해당 Method를 사용할 때는 새로 추가할 데이터를 Object 형태로 요청해야 한다.
+- Return 값으로는 새로 추가되는 데이터를 Object 형태로 받는다.
+
+### Put
+
+- Put Method는 기존 데이터를 Update 할 경우에 사용할 수 있다.
+
+| Task | Route | Accepts | Returns |
+| ---
+| **Updating an object** | /todos/:id | A single object | The saved object (or errors) |
+
+- 해당 Method를 사용할 때는 새로 추가할 데이터를 Object 형태로 요청해야 한다.
+- Return 값으로는 새로 변경되는 데이터를 Object 형태로 받는다.
+
+### Delete
+
+- Delete Method는 기존 데이터를 삭제할 때 사용한다.
+
+| Task | Route | Accepts | Returns |
+| ---
+| **Deleting an object** | /todos/:id | A single object | Nothing |
+
+
+- Return 값으로는 아무 것도 받지 않으며, 대체로 responsive의 status 값을 받아 이 후 처리를 한다.`
