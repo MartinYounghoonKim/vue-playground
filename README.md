@@ -71,6 +71,8 @@ $ brew install mongodb
 $ npm install -g deployd
 ```
 
+- 만약 위와 같이 Local의 db를 띄우지 않을 경우, `http://35.207.34.33:2403/todos` 의 api를 이용하면 됩니다. (스터디 기간에만 해당 IP 주소를 이용 가능하며, 이후에는 삭제될 예정임으로 참고해주시면 됩니다.)
+
 ## Restful api methods
 
 ### Get
