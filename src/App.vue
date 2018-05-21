@@ -55,25 +55,8 @@
 </template>
 
 <script>
-    import { mapActions } from 'vuex';
     export default {
         name: 'app',
-        created () {
-            this.fetchTodos()
-                .then(res => {
-                    console.log(res);
-                });
-            this.setTodo({ todo: 'Example todo' })
-                .then(res => {
-                    console.log(res);
-                })
-        },
-        methods: {
-            ...mapActions({
-                fetchTodos: 'fetchTodos',
-                setTodo: 'setTodo'
-            })
-        }
     }
 </script>
 
