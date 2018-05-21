@@ -16,7 +16,7 @@
 			exports: {}
 		};
 
-		// Execute the module function
+		// Execute the module function( 함수 실행 )
 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 
 		// Flag the module as loaded
@@ -59,7 +59,7 @@
 	// __webpack_public_path__
 	__webpack_require__.p = "/dist/";
 
-	// Load entry module and return exports
+	// Load entry module and return exports( 최초 0번째 index의 함수를 실행)
 	return __webpack_require__(__webpack_require__.s = 0);
 })
 /************************************************************************/

@@ -11,6 +11,13 @@ Object.defineProperty(o, 'a', {
     configurable: true
 });
 
+/**
+ * @description Real codes
+ * 부모함수의 parameters
+ * (module, __webpack_exports__, __webpack_require__)
+ */
+
+
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__a__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__b__ = __webpack_require__(2);
