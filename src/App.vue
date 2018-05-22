@@ -1,73 +1,73 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>Vue playground</h1>
-    {{ message }}
-    <button type="button" @click="updateTest">데이터 변경</button>
-  </div>
+    <div id="app">
+        <img src="./assets/logo.png">
+        <h1>Vue playground</h1>
+        {{ message }}
+        <button type="button" @click="updateTest">데이터 변경</button>
+    </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      message: '변경 전의 메세지'
+    export default {
+        name: 'app',
+        data() {
+            return {
+                message: '변경 전의 메세지'
+            }
+        },
+        beforeCreate() {
+            console.log('인스턴스 초기화 후, 데이터 관찰/이벤트/감시자 설정 전 호출됩니다.')
+        },
+        created() {
+            //$el 속성을 사용할 수 없습니다.
+            console.log('인스턴스가 작성된 후 동기적으로 호출됩니다.');
+        },
+        beforeMount() {
+            console.log('마운트되기 바로 직전 전 호출됩니다.')
+        },
+        mounted() {
+            //$el 속성을 사용할 수 있습니다.
+            console.log('마운트 된 직후 호출됩니다.')
+        },
+        beforeUpdate() {
+            console.log(`${this.message}가 변경됩니다.`);
+        },
+        updated() {
+            console.log(`${this.message}로 변경되었습니다.`);
+        },
+        methods: {
+            updateTest() {
+                this.message = '변경 후의 메세지'
+            }
+        }
     }
-  },
-  beforeCreate() {
-    console.log('인스턴스 초기화 후, 데이터 관찰/이벤트/감시자 설정 전 호출됩니다.')
-  },
-  created() {
-    //$el 속성을 사용할 수 없습니다.
-    console.log('인스턴스가 작성된 후 동기적으로 호출됩니다.');
-  },
-  beforeMount() {
-    console.log('마운트되기 바로 직전 전 호출됩니다.')
-  },
-  mounted() {
-    //$el 속성을 사용할 수 있습니다.
-    console.log('마운트 된 직후 호출됩니다.')
-  },
-  beforeUpdate () {
-    console.log(`${this.message}가 변경됩니다.` );
-  },
-  updated () {
-    console.log(`${this.message}로 변경되었습니다.` );
-  },
-  methods: {
-    updateTest () {
-      this.message = '변경 후의 메세지'
-    }
-  }
-}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    #app {
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 60px;
+    }
 
-h1, h2 {
-  font-weight: normal;
-}
+    h1, h2 {
+        font-weight: normal;
+    }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+    li {
+        display: inline-block;
+        margin: 0 10px;
+    }
 
-a {
-  color: #42b983;
-}
+    a {
+        color: #42b983;
+    }
 </style>
