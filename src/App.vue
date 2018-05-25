@@ -55,8 +55,18 @@
 </template>
 
 <script>
+    import axios from 'axios';
     export default {
         name: 'app',
+        created () {
+            // 생성 -> axios.post('http://35.207.34.33:2403/todos', { todo: 'string' })
+            // 삭제 -> axios.delete('http://35.207.34.33:2403/todos/{id}'), // id => string
+            // 업데이트  -> axios.put('http://35.207.34.33:2403/todos/{id}', { todo: 'string' })
+            axios.get('http://35.207.34.33:2403/todos')
+                .then(res => {
+                    console.log(res.data);
+                })
+        }
     }
 </script>
 
